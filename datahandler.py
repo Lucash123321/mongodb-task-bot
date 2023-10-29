@@ -29,7 +29,10 @@ class DataHandler:
 
         elif group_type == "hour":
             group_data = {
-
+                'year': {'$year': '$dt'},
+                'month': {'$month': '$dt'},
+                'day': {'$dayOfMonth': '$dt'},
+                'hour': {'$hour': '$dt'},
             }
 
         else:
